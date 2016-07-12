@@ -1,0 +1,246 @@
+package babynames;
+
+import java.util.*;
+
+import java.io.*;
+
+
+
+public class BabyNames {
+
+public static void main(String[] args) 
+
+throws FileNotFoundException{
+
+
+String uinput = "";
+
+boolean check = false;
+
+int line = 0;
+int num1 = 0;
+int num2 = 0;
+int num3 = 0;
+int num4 = 0;
+int num5 = 0;
+int num6 = 0;
+int num7 = 0;
+int num8 = 0;
+int num9 = 0;
+int num10 = 0;
+int num11 = 0;
+
+int line = 0;
+
+//intializng array list for names and numbers
+List<String> list = new ArrayList<String>();
+
+List<String> num = new ArrayList<String>();
+
+
+    Scanner input = new Scanner(new File("babynames.txt"));
+
+Scanner console = new Scanner(System.in);
+
+
+//get name and change to lowercase
+System.out.print("Name? ");
+
+String name = console.next();
+
+uinput = name.toLowerCase();
+
+
+//while input file does not reach end of file
+while (input.hasNextLine()){
+
+list.add(input.nextLine().toLowerCase());
+
+line++;
+
+}
+
+
+
+
+
+//create an index limit for array list
+for(int i = 0; i <= line-1; i++){
+
+if (list.get(i).contains(uinput + " ")){
+
+check = true;
+
+//split list array into another array for numbers
+
+for(int j = 0; j <= (list.get(i).length()) - 1; j++){
+
+num = new ArrayList<String>(Arrays.asList(list.get(i).split(" ")));
+
+}
+//change array num to an integer
+
+num1 = Integer.parseInt(num.get(1));
+
+num2 = Integer.parseInt(num.get(2));
+
+num3 = Integer.parseInt(num.get(3));
+
+num4 = Integer.parseInt(num.get(4));
+
+num5 = Integer.parseInt(num.get(5));
+
+num6 = Integer.parseInt(num.get(6));
+
+num7 = Integer.parseInt(num.get(7));
+
+num8 = Integer.parseInt(num.get(8));
+
+num9 = Integer.parseInt(num.get(9));
+
+num10 = Integer.parseInt(num.get(10));
+
+num11 = Integer.parseInt(num.get(11));
+}
+
+}
+
+
+
+
+
+
+
+//if name exists, calculate from num array and print stars
+if (check == true){
+
+System.out.println("Statistics on name " + name);
+
+System.out.print("1900: ");
+
+for (int i = 1; i <= num1 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1910: ");
+
+for (int i = 1; i <= num2 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1920: ");
+
+for (int i = 1; i <= num3 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1930: ");
+
+for (int i = 1; i <= num4 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1940: ");
+
+for (int i = 1; i <= num5 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1950: ");
+
+for (int i = 1; i <= num6 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1960: ");
+
+for (int i = 1; i <= num7 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1970: ");
+
+for (int i = 1; i <= num8 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1980: ");
+
+for (int i = 1; i <= num9 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("1990: ");
+
+for (int i = 1; i <= num10 / 20; i++){
+
+System.out.print("*");
+
+}
+
+System.out.println();
+
+System.out.print("2000: ");
+
+for (int i = 1; i <= num11 / 20; i++){
+
+System.out.print("*");
+
+}
+
+}
+
+//else if name is not found
+else{
+
+System.out.println(name + " is not found");
+
+}
+
+
+
+}
+
+}
+
+
+
+
+
+
